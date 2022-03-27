@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab02-05</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1 class="nav_logo">Laboratorio 02</h1>
+            <label for="menu" class="nav-label">
+                <img src="assets/menu.svg" alt="" class="nav-img">
+            </label>
+            <input type="checkbox" id="menu" class="nav-input">
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Ejercicio 1</a>
+                <a href="02.html" class="nav-item">Ejercicio 2</a>
+                <a href="03.html" class="nav-item">Ejercicio 3</a>
+                <a href="04.html" class="nav-item">Ejercicio 4</a>
+                <a href="05.html" class="nav-item">Ejercicio 5</a>
+            </div>
+        </div>
+    </div>
+    <div class="ejercicio2">
+        <form class="form1">
+            <table>
+                <ul>
+                    <label for="">Número 1:</label>
+                    <input type="text" id="n1" >
+                </ul>
+                <ul>
+                    <label for="">Número 2:</label>
+                    <input type="text" id="n2" >
+                </ul>
+                <ul>
+                    <label for="">Número 3:</label>
+                    <input type="text" id="n3" >
+                </ul>
+            </table>
+        </form>
+        <button onclick="function4()">Enviar</button>
+        <div class="results">
+            <p id="nmayor"></p>
+        </div>
+    </div>
+    <script>
+        function function4(){
+            var a = document.getElementById("n1").value;
+            var b = document.getElementById("n2").value;
+            var c = document.getElementById("n3").value;
+
+            if(a>b){
+                if(a>c){
+                    document.getElementById("nmayor").innerHTML = "El mayor es "+a;
+                }else{
+                    document.getElementById("nmayor").innerHTML = "El mayor es "+c;
+                }
+            }else{
+                if(b>c){
+                    document.getElementById("nmayor").innerHTML = "El mayor es "+b;
+                }else{
+                    document.getElementById("nmayor").innerHTML = "El mayor es "+c;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

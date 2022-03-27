@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lab02-01</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1 class="nav_logo">Laboratorio 02</h1>
+            <label for="menu" class="nav-label">
+                <img src="assets/menu.svg" alt="" class="nav-img">
+            </label>
+            <input type="checkbox" id="menu" class="nav-input">
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Ejercicio 1</a>
+                <a href="02.html" class="nav-item">Ejercicio 2</a>
+                <a href="03.html" class="nav-item">Ejercicio 3</a>
+                <a href="04.html" class="nav-item">Ejercicio 4</a>
+                <a href="05.html" class="nav-item">Ejercicio 5</a>
+            </div>
+        </div>
+    </div>
+    <div class="lab">
+        <div class="ejercicio1">
+            <form class="form">
+                <label for="">Nombre:</label>
+                <input type="text" id="myInput" >
+            </form>
+            <button onclick="myFunction()">Enviar</button>
+        </div>
+        <div class="text">
+            <p id="texto"></p>
+        </div>
+    
+    </div>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myInput").value;
+        document.getElementById("texto").innerHTML ="<h1> Bienvenido  </h1>"+ x;
+        }
+    </script>
+</body>
+</html>

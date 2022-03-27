@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab02-04</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1 class="nav_logo">Laboratorio 02</h1>
+            <label for="menu" class="nav-label">
+                <img src="assets/menu.svg" alt="" class="nav-img">
+            </label>
+            <input type="checkbox" id="menu" class="nav-input">
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Ejercicio 1</a>
+                <a href="02.html" class="nav-item">Ejercicio 2</a>
+                <a href="03.html" class="nav-item">Ejercicio 3</a>
+                <a href="04.html" class="nav-item">Ejercicio 4</a>
+                <a href="05.html" class="nav-item">Ejercicio 5</a>
+            </div>
+        </div>
+    </div>
+    <div class="ejercicio2">
+        <form class="form1">
+            <table>
+                <ul>
+                    <label for="">Nota 1:</label>
+                    <input type="text" id="nota1" >
+                </ul>
+                <ul>
+                    <label for="">Nota 2:</label>
+                    <input type="text" id="nota2" >
+                </ul>
+                <ul>
+                    <label for="">Nota 3:</label>
+                    <input type="text" id="nota3" >
+                </ul>
+            </table>
+        </form>
+        <button onclick="function3()">Enviar</button>
+        <div class="results">
+            <p id="nfinal" class="resultado1"></p>
+        </div>
+    </div>
+    <script>
+        function function3(){
+            var a = document.getElementById("nota1").value;
+            var b = document.getElementById("nota2").value;
+            var c = document.getElementById("nota3").value;
+            var prom = (parseInt(a)+parseInt(b)+parseInt(c))/3;
+
+            if(prom>4){
+                document.getElementById("nfinal").innerHTML = "Regular";
+            }else if(prom<4){
+                document.getElementById("nfinal").innerHTML = "Reprobado";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab02-02</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-container">
+            <h1 class="nav_logo">Laboratorio 02</h1>
+            <label for="menu" class="nav-label">
+                <img src="assets/menu.svg" alt="" class="nav-img">
+            </label>
+            <input type="checkbox" id="menu" class="nav-input">
+            <div class="nav-menu">
+                <a href="index.html" class="nav-item">Ejercicio 1</a>
+                <a href="02.html" class="nav-item">Ejercicio 2</a>
+                <a href="03.html" class="nav-item">Ejercicio 3</a>
+                <a href="04.html" class="nav-item">Ejercicio 4</a>
+                <a href="05.html" class="nav-item">Ejercicio 5</a>
+            </div>
+        </div>
+    </div>
+    <div class="ejercicio2">
+        <form class="form1">
+            <table>
+                <ul>
+                <label for="">Primer número:</label>
+                <input type="text" id="num1" >
+                </ul>
+                <ul>
+                    <label for="">Segundo número:</label>
+                    <input type="text" id="num2" ></ul>
+                <ul>
+                    <label for="">Tercer número:</label>
+                    <input type="text" id="num3" >
+                </ul>
+                <ul>
+                    <label for="">Cuarto número:</label>
+                    <input type="text" id="num4" >
+                </ul>
+            </table>
+        </form>
+        <button onclick="function1()">Enviar</button>
+        <div class="resultado">
+            <p id="resultado1" class="resultado1"></p>
+            <p id="resultado2" class="resultado2"></p>
+        </div>
+        <script>
+            function function1() {
+            var a = document.getElementById("num1").value;
+            var b = document.getElementById("num2").value;
+            var c = document.getElementById("num3").value;
+            var d = document.getElementById("num4").value;
+            var suma = parseInt(a)+parseInt(b);
+            var producto = parseInt(c)*parseInt(d);
+            document.getElementById("resultado1").innerHTML = "Suma: "+suma;
+            document.getElementById("resultado2").innerHTML = "Producto: "+producto;
+            }
+            
+        </script>
+    </div>
+</body>
+</html>
